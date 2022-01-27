@@ -1,0 +1,53 @@
+const mongoose=require('mongoose');
+const invSchema=new mongoose.Schema({
+    email:{
+        type:String,
+        required:true
+    },
+    invoicestatus:{
+        type:String,
+        required:true,
+    },
+    invoiceno:{
+        type:Number,
+        required:true,
+    },
+    senderlogo:{
+        type:String,
+        required:true
+    },
+    sendername:{
+        type:String,
+        required:true
+    },
+    senderadd:{
+        type:String,
+        required:true,
+    },
+    receivername:{
+        type:String,
+        required:true,
+    },
+    receiveradd:{
+        type:String,
+        required:true,
+    },
+    invoiceamount:{
+        type:Number,
+        required:true,
+    },
+    invoicedate:{
+        type:String,
+        required:true,
+    },
+    duedate:{
+        type:String,
+        required:true,
+    },
+    date:{
+        type:Date,
+        default:Date.now
+    }
+   
+})
+module.exports=mongoose.model("invoicedata",invSchema);
